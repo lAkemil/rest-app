@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  nginx:
+    image: akemi48/nginx:1.4
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - web
+  web:
+    image: akemi48/tet:1.52
+    ports:
+      - "5000:5000"
+    links:
+      - db
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
