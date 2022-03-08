@@ -1,4 +1,9 @@
-# rest-app
+Rest api сервис для работы с базой данных
 
+Это приложение может добавить запись в базу данных(mongoDB) и вывести его потом по номеру записи.
+Проверку работы можно провести добавив запись в БД:
+Добавление записи методом POST: /pdr
 
-curl -i -X POST -H "Content-type:application/json" -d "{ \"id\" : \"42\", \"name\" : \"norm\"}" localhost/pdr
+curl -i -X POST -H "Content-type:application/json" -d "{ "id" : "i", "name" : "x"}" localhost/pdr
+
+Просмотр добавленной записи localhost/one/<i>
