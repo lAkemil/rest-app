@@ -4,7 +4,7 @@
 Для работы необходимо запустить docker-compose (команда для запуска: docker-compose up ), а после уже работоспособность БД добавив запись:
 Добавление записи методом POST: /pdr
 
-`curl -i -X POST -H "Content-type:application/json" -d "{ /"id/" : /"i/", /"name/" : /"x/"}" localhost/pdr`
+`curl -i -X POST -H "Content-type:application/json" -d "{ \"id\" : \"i\", \"name\" : \"x\"}" localhost/pdr`
 
 Где: "i" - это любой выбранный номер 
      "x" - это любая запись 
