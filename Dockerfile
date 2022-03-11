@@ -1,13 +1,8 @@
-FROM ubuntu:latest
+FROM python:3.9-alpine3.15
 
-RUN apt-get update -y
-RUN apt-get install -y python3-pip python-dev build-essential
-RUN apt-get install -y mongodb
-RUN pip3 install pymongo
+COPY . ./data/
 
-COPY app.py ./data/app.py
-
-RUN pip3 install flask
+RUN pip3 install -r /data/requirements.txt
 
 EXPOSE 5000
 
