@@ -10,7 +10,7 @@ services:
     links:
       - web
   web:
-    image: akemi48/tet:1.52
+    image: akemi48/tet:1.55
     ports:
       - "5000:5000"
     links:

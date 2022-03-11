@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-CONNECTION_STRING = "mongodb://hren_db_1:27017"
+CONNECTION_STRING = "mongodb://rest-app_db_1:27017"
 from pymongo import MongoClient
 client = MongoClient(CONNECTION_STRING)
 
