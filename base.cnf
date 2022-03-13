@@ -1,0 +1,15 @@
+
+[ req ]
+default_bits = 4096
+default_keyfile = nginx-selfsigned.key
+default_md = sha256
+distinguished_name = req_dn
+prompt = no
+
+[ req_dn ]
+countryName = ru 
+stateOrProvinceName = kstr
+localityName = kstr
+organizationName = kstr
+organizationalUnitName = kstr
+commonName = akemi
