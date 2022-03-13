@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nginx:
-    image: akemi48/nginx:1.4
+    image: akemi48/nginx:1.5
     volumes:
       - ./nginx:/etc/nginx/conf.d
     ports:

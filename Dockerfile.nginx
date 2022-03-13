@@ -1,4 +1,5 @@
 FROM nginx:latest
 
-COPY nginx-selfsigned.crt /etc/nginx/nginx-selfsigned.crt
-COPY nginx-selfsigned.key /etc/nginx/nginx-selfsigned.key
+COPY base.cnf /etc/nginx/base.cnf
+RUN openssl genrsa -out /etc/nginx/nginx-selfsigned.key 4096 && openssl req -new -key /etc/nginx/nginx-selfsigned.key -out /etc/nginx/nginx-selfsigned.csr -config /etc/nginx/base.cnf && openssl x509 -sha256 -req -days 365 -in /etc/nginx/nginx-selfsigned.csr -signkey /etc/nginx/nginx-selfsigned.key -out /etc/nginx/nginx-selfsigned.crt -extfile /etc/nginx/base.cnf
+
