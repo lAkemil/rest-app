@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nginx:
-    image: akemi48/nginx:1.5
+    image: akemi48/nginx:1.4
     volumes:
       - ./nginx:/etc/nginx/conf.d
     ports:
@@ -10,7 +10,7 @@ services:
     links:
       - web
   web:
-    image: akemi48/tet:1.66
+    image: akemi48/tet:1.52
     ports:
       - "5000:5000"
     links:
