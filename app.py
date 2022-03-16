@@ -27,5 +27,14 @@ def find_one_id(i):
     find_ok = connection_mongo_db.find_one({"id": (i)})
     return str(find_ok)
 
+@app.route('/all', methods=['GET'])
+def find_all():
+    connection_mongo_db = client.db.db_1
+    x = []
+    find_ok = connection_mongo_db.find()
+    for i in find_ok:
+        x.append(i)
+    return str(x)
+
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
