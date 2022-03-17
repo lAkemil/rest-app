@@ -6,7 +6,7 @@ read maximum
 
 idf()
 {
-for (( k=1; k <= minimum; k++ )) 
+for (( k=1; k <=minimum; k++ )) 
 do
 valuef
 echo "$k, $(date +%s), $(( $RANDOM % 100 + 1 ))" >> file.txt
@@ -16,7 +16,7 @@ done
 
 valuef()
 {
-for (( l=1; l < maximum; l++ ))  
+for (( l=1; l <maximum; l++ ))  
 do
 echo "$k, $(date +%s), $(( $RANDOM % 100 + 1 ))" >> file.txt 
 sleep 1
