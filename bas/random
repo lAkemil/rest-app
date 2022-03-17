@@ -1,0 +1,27 @@
+#!/bin/bash
+echo "Введите id:"
+read minimum
+echo "Введите value:"
+read maximum
+
+idf()
+{
+for (( k=1; k <= minimum; k++ )) 
+do
+valuef
+echo "$k, $(date +%s), $(( $RANDOM % 100 + 1 ))" >> file.txt
+sleep 1
+done
+}
+
+valuef()
+{
+for (( l=1; l < maximum; l++ ))  
+do
+echo "$k, $(date +%s), $(( $RANDOM % 100 + 1 ))" >> file.txt 
+sleep 1
+done
+}
+idf
+
+
